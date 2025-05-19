@@ -1,56 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple 8 Ball Pool</title>
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    #pool-table {
-      background: #006600;
-      width: 800px;
-      height: 400px;
-      border: 20px solid #8B4513;
-      position: relative;
-      border-radius: 15px;
-    }
-
-    .ball {
-      width: 20px;
-      height: 20px;
-      background: white;
-      border-radius: 50%;
-      position: absolute;
-      top: 190px;
-      left: 390px;
-      box-shadow: 0 0 5px #fff;
-    }
-  </style>
+    <title>Simple Pool Table</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="pool-table">
-    <div class="ball" id="cueBall"></div>
-  </div>
+    <div id="pool-table">
+        <div class="ball white-ball" id="cue-ball"></div>
+        <div class="ball solid-ball" id="ball-1"></div>
+        <div class="ball solid-ball" id="ball-2"></div>
+        <div class="ball solid-ball" id="ball-3"></div>
+        <div class="ball solid-ball" id="ball-4"></div>
+        <div class="ball solid-ball" id="ball-5"></div>
+        <div class="ball solid-ball" id="ball-6"></div>
+        <div class="ball solid-ball" id="ball-7"></div>
+        <div class="ball eight-ball" id="ball-8"></div>
+        <div class="ball striped-ball" id="ball-9"></div>
+        <div class="ball striped-ball" id="ball-10"></div>
+        <div class="ball striped-ball" id="ball-11"></div>
+        <div class="ball striped-ball" id="ball-12"></div>
+        <div class="ball striped-ball" id="ball-13"></div>
+        <div class="ball striped-ball" id="ball-14"></div>
+        <div class="ball striped-ball" id="ball-15"></div>
+    </div>
 
-  <script>
-    const cueBall = document.getElementById("cueBall");
-
-    document.getElementById("pool-table").addEventListener("click", (e) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const x = e.clientX - rect.left - 10;
-      const y = e.clientY - rect.top - 10;
-
-      cueBall.style.left = `${x}px`;
-      cueBall.style.top = `${y}px`;
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
